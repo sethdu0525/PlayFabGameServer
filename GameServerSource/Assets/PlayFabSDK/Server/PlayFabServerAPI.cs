@@ -164,17 +164,6 @@ namespace PlayFab
         }
 
         /// <summary>
-        /// Deletes custom data, all account linkages, and statistics.
-        /// </summary>
-        [Obsolete("Use 'DeletePlayer' instead", true)]
-        public static void DeleteUsers(DeleteUsersRequest request, Action<DeleteUsersResult> resultCallback, Action<PlayFabError> errorCallback, object customData = null, Dictionary<string, string> extraHeaders = null)
-        {
-            if (PlayFabSettings.DeveloperSecretKey == null) throw new PlayFabException(PlayFabExceptionCode.DeveloperKeyNotSet,"Must have PlayFabSettings.DeveloperSecretKey set to call this method");
-
-            PlayFabHttp.MakeApiCall("/Server/DeleteUsers", request, AuthType.DevSecretKey, resultCallback, errorCallback, customData, extraHeaders);
-        }
-
-        /// <summary>
         /// Inform the matchmaker that a Game Server Instance is removed.
         /// </summary>
         public static void DeregisterGame(DeregisterGameRequest request, Action<DeregisterGameResponse> resultCallback, Action<PlayFabError> errorCallback, object customData = null, Dictionary<string, string> extraHeaders = null)

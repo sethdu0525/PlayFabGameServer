@@ -1369,11 +1369,6 @@ namespace PlayFab.ClientModels
         /// <summary>
         /// IPV4 address of the server
         /// </summary>
-        [Obsolete("Use 'ServerIPV4Address' instead", true)]
-        public string ServerHostname;
-        /// <summary>
-        /// IPV4 address of the server
-        /// </summary>
         public string ServerIPV4Address;
         /// <summary>
         /// IPV6 address of the server
@@ -3841,11 +3836,6 @@ namespace PlayFab.ClientModels
         /// <summary>
         /// IPV4 address of the server
         /// </summary>
-        [Obsolete("Use 'ServerIPV4Address' instead", true)]
-        public string ServerHostname;
-        /// <summary>
-        /// IPV4 address of the server
-        /// </summary>
         public string ServerIPV4Address;
         /// <summary>
         /// IPV6 address of the server
@@ -4754,11 +4744,6 @@ namespace PlayFab.ClientModels
         /// password required to log into the server
         /// </summary>
         public string Password;
-        /// <summary>
-        /// server IPV4 address
-        /// </summary>
-        [Obsolete("Use 'ServerIPV4Address' instead", true)]
-        public string ServerHostname;
         /// <summary>
         /// server IPV4 address
         /// </summary>
