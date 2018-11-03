@@ -31,8 +31,6 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<DeletePlayerResult> OnServerDeletePlayerResultEvent;
         public event PlayFabRequestEvent<DeleteSharedGroupRequest> OnServerDeleteSharedGroupRequestEvent;
         public event PlayFabResultEvent<EmptyResponse> OnServerDeleteSharedGroupResultEvent;
-        public event PlayFabRequestEvent<DeleteUsersRequest> OnServerDeleteUsersRequestEvent;
-        public event PlayFabResultEvent<DeleteUsersResult> OnServerDeleteUsersResultEvent;
         public event PlayFabRequestEvent<DeregisterGameRequest> OnServerDeregisterGameRequestEvent;
         public event PlayFabResultEvent<DeregisterGameResponse> OnServerDeregisterGameResultEvent;
         public event PlayFabRequestEvent<EvaluateRandomResultTableRequest> OnServerEvaluateRandomResultTableRequestEvent;

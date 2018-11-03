@@ -1081,25 +1081,6 @@ namespace PlayFab.ServerModels
     }
 
     [Serializable]
-    public class DeleteUsersRequest : PlayFabRequestCommon
-    {
-        /// <summary>
-        /// An array of unique PlayFab assigned ID of the user on whom the operation will be performed.
-        /// </summary>
-        public List<string> PlayFabIds;
-        /// <summary>
-        /// Unique identifier for the title, found in the Settings > Game Properties section of the PlayFab developer site when a
-        /// title has been selected.
-        /// </summary>
-        public string TitleId;
-    }
-
-    [Serializable]
-    public class DeleteUsersResult : PlayFabResultCommon
-    {
-    }
-
-    [Serializable]
     public class DeregisterGameRequest : PlayFabRequestCommon
     {
         /// <summary>
@@ -1718,6 +1699,11 @@ namespace PlayFab.ServerModels
         FacebookInstantGamesIdNotLinked,
         InvalidFacebookInstantGamesSignature,
         FacebookInstantGamesAuthNotConfiguredForTitle,
+        EntityProfileConstraintValidationFailed,
+        PlayInsightsIngestionKeyPending,
+        PlayInsightsIngestionKeyNotFound,
+        StatisticTagRequired,
+        StatisticTagInvalid,
         MatchmakingEntityInvalid,
         MatchmakingPlayerAttributesInvalid,
         MatchmakingCreateRequestMissing,
@@ -1752,7 +1738,9 @@ namespace PlayFab.ServerModels
         MatchmakingMemberProfileInvalid,
         WriteAttemptedDuringExport,
         NintendoSwitchDeviceIdNotLinked,
-        MatchmakingNotEnabled
+        MatchmakingNotEnabled,
+        MatchmakingGetStatisticsIdentityInvalid,
+        MatchmakingStatisticsIdMissing
     }
 
     [Serializable]
@@ -3949,11 +3937,6 @@ namespace PlayFab.ServerModels
         /// region and use Tags (below) to specify your custom region.
         /// </summary>
         public Region Region;
-        /// <summary>
-        /// IPV4 address of the Game Server Instance.
-        /// </summary>
-        [Obsolete("Use 'ServerIPV4Address' instead", true)]
-        public string ServerHost;
         /// <summary>
         /// IPV4 address of the game server instance.
         /// </summary>
